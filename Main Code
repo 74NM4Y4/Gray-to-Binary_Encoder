@@ -1,0 +1,17 @@
+//for 4 bit conversion only
+module Gray_to_Binary_Encoder(
+    input g0,
+    input g1,
+    input g2,
+    input g3,
+    output b0,
+    output b1,
+    output b2,
+    output b3
+    );
+    
+    assign b3 = g3;
+    assign b2 = b3^g2;
+    assign b1 = b2^g1;
+    assign b0 = b1^g0;
+endmodule
